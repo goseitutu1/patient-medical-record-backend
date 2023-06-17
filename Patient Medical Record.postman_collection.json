@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "29af6515-3815-45a6-8dae-37ab6e3c2566",
+		"name": "Patient Medical Record",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10203218"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "full_name",
+							"value": "osei tutu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/api/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123457",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient Medical Record",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjVmNDA0YmViZDI5ODJhOWNlNzM1NTFiYTVlYmY1MjI1YTk2NDYwNTIxZGFiODZlMDc5ZmQzMWRkOTVlNmIxMzFlNDUyOTE3NTMwNGI2NTMiLCJpYXQiOjE2ODY4NDQ0NzkuNTg2NjYxLCJuYmYiOjE2ODY4NDQ0NzkuNTg2NjY0LCJleHAiOjE3MTg0NjY4NzkuNTc2NDU1LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.C27jChWtpCOmyBNkShWrBxJbsgn50KgwLxJ_iMu0N9XIj-5IoYffxBQokOCBPpc6cK5KsMo5p5we2CAdKumGb3qcv0q3UD72Rq-bnd5tLtJfd8Yu5QJpp1aEENoH9O4SifhFJS0PHakjQJIa6bnIV7-U-sQf6IHXER2wvvGF70IS4ak24lNovQsY9PD6L18uLhdXqpCYkFPGPnXd-SZb43ccMkk7MclQXFE90VjDwgH_uAfyijhDkSGS-LVyHFv8ZvqGVRO2hxaszcoBPlVO9rcXuap0C84SInUf9x2VsWNE_YAFzbaPgoQkMSrn0XMRsuKxplXT1e2n4z1pvl67e-mdHnc1oRfMBU2U_mKXUH0EU1vuUrZH6T3z388F4Rdh86OSVmEkVmw8Csf9uD9LhO55nBiVJvDywIU31qXfr4CtipDbWnR1CIqzxlGQTE_MnkRsawIvTSP1gZyU-KtezhI6zDoT9o1KGx6uv5O8OzgrnYMVvK0u28dTqNNrk95Ma--OFEDqxGERqUA22yg12PZUDf120dDCDDw93nONz5vA0QRqjfescGEhNfh8AnGH9Xz9K3LXUNnJL30w4AZYA_XtZ4xNA7R6dWRVwppBFyQfFXZQg5uYq-LeebtQmy3FT05hdId8IIlyMAvbO9MF9jQEyh80BSW2LeAVYFmJJ7o",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patient_name",
+							"value": "Osei tutu emmanuel",
+							"type": "text"
+						},
+						{
+							"key": "chest",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "lumbo_sacral_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "shoulder_joint",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pelvic_joint",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "humerus",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "fingers",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "cervical_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thoraco_lumbar_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "elbow_joint",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "hip_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "radius_or_ulner",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "toes",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thoracic_vertebrae",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "wrist_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "knee_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "femoral",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "foot",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "lumvar_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thoracic_inlet",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "sacro_lliac_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "ankle",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "tibia_or_fibula",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "obstetric",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "abdioninal",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pelvis",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "prostrate",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "breast",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thyroid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ct_scan",
+							"value": "yes",
+							"type": "text"
+						},
+						{
+							"key": "mri",
+							"value": "no",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/api/create-patient-medical-record",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"create-patient-medical-record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Patient Medical Record",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjVmNDA0YmViZDI5ODJhOWNlNzM1NTFiYTVlYmY1MjI1YTk2NDYwNTIxZGFiODZlMDc5ZmQzMWRkOTVlNmIxMzFlNDUyOTE3NTMwNGI2NTMiLCJpYXQiOjE2ODY4NDQ0NzkuNTg2NjYxLCJuYmYiOjE2ODY4NDQ0NzkuNTg2NjY0LCJleHAiOjE3MTg0NjY4NzkuNTc2NDU1LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.C27jChWtpCOmyBNkShWrBxJbsgn50KgwLxJ_iMu0N9XIj-5IoYffxBQokOCBPpc6cK5KsMo5p5we2CAdKumGb3qcv0q3UD72Rq-bnd5tLtJfd8Yu5QJpp1aEENoH9O4SifhFJS0PHakjQJIa6bnIV7-U-sQf6IHXER2wvvGF70IS4ak24lNovQsY9PD6L18uLhdXqpCYkFPGPnXd-SZb43ccMkk7MclQXFE90VjDwgH_uAfyijhDkSGS-LVyHFv8ZvqGVRO2hxaszcoBPlVO9rcXuap0C84SInUf9x2VsWNE_YAFzbaPgoQkMSrn0XMRsuKxplXT1e2n4z1pvl67e-mdHnc1oRfMBU2U_mKXUH0EU1vuUrZH6T3z388F4Rdh86OSVmEkVmw8Csf9uD9LhO55nBiVJvDywIU31qXfr4CtipDbWnR1CIqzxlGQTE_MnkRsawIvTSP1gZyU-KtezhI6zDoT9o1KGx6uv5O8OzgrnYMVvK0u28dTqNNrk95Ma--OFEDqxGERqUA22yg12PZUDf120dDCDDw93nONz5vA0QRqjfescGEhNfh8AnGH9Xz9K3LXUNnJL30w4AZYA_XtZ4xNA7R6dWRVwppBFyQfFXZQg5uYq-LeebtQmy3FT05hdId8IIlyMAvbO9MF9jQEyh80BSW2LeAVYFmJJ7o",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patient_name",
+							"value": "Osei tutu emmanuel",
+							"type": "text"
+						},
+						{
+							"key": "chest",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "lumbo_sacral_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "shoulder_joint",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pelvic_joint",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "humerus",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "fingers",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "cervical_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thoraco_lumbar_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "elbow_joint",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "hip_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "radius_or_ulner",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "toes",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thoracic_vertebrae",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "wrist_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "knee_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "femoral",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "foot",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "lumvar_vertebrae",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thoracic_inlet",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "sacro_lliac_joint",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "ankle",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "tibia_or_fibula",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "obstetric",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "abdioninal",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "pelvis",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "prostrate",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "breast",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "thyroid",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "ct_scan",
+							"value": "yes",
+							"type": "text"
+						},
+						{
+							"key": "mri",
+							"value": "yes",
+							"type": "text"
+						},
+						{
+							"key": "patient_id",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/api/edit-patient-medical-record",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"edit-patient-medical-record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Patient Medical Record",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjVmNDA0YmViZDI5ODJhOWNlNzM1NTFiYTVlYmY1MjI1YTk2NDYwNTIxZGFiODZlMDc5ZmQzMWRkOTVlNmIxMzFlNDUyOTE3NTMwNGI2NTMiLCJpYXQiOjE2ODY4NDQ0NzkuNTg2NjYxLCJuYmYiOjE2ODY4NDQ0NzkuNTg2NjY0LCJleHAiOjE3MTg0NjY4NzkuNTc2NDU1LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.C27jChWtpCOmyBNkShWrBxJbsgn50KgwLxJ_iMu0N9XIj-5IoYffxBQokOCBPpc6cK5KsMo5p5we2CAdKumGb3qcv0q3UD72Rq-bnd5tLtJfd8Yu5QJpp1aEENoH9O4SifhFJS0PHakjQJIa6bnIV7-U-sQf6IHXER2wvvGF70IS4ak24lNovQsY9PD6L18uLhdXqpCYkFPGPnXd-SZb43ccMkk7MclQXFE90VjDwgH_uAfyijhDkSGS-LVyHFv8ZvqGVRO2hxaszcoBPlVO9rcXuap0C84SInUf9x2VsWNE_YAFzbaPgoQkMSrn0XMRsuKxplXT1e2n4z1pvl67e-mdHnc1oRfMBU2U_mKXUH0EU1vuUrZH6T3z388F4Rdh86OSVmEkVmw8Csf9uD9LhO55nBiVJvDywIU31qXfr4CtipDbWnR1CIqzxlGQTE_MnkRsawIvTSP1gZyU-KtezhI6zDoT9o1KGx6uv5O8OzgrnYMVvK0u28dTqNNrk95Ma--OFEDqxGERqUA22yg12PZUDf120dDCDDw93nONz5vA0QRqjfescGEhNfh8AnGH9Xz9K3LXUNnJL30w4AZYA_XtZ4xNA7R6dWRVwppBFyQfFXZQg5uYq-LeebtQmy3FT05hdId8IIlyMAvbO9MF9jQEyh80BSW2LeAVYFmJJ7o",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/api/get-patient-medical-record?patient_id=19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"get-patient-medical-record"
+					],
+					"query": [
+						{
+							"key": "patient_id",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Medical Records",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjVmNDA0YmViZDI5ODJhOWNlNzM1NTFiYTVlYmY1MjI1YTk2NDYwNTIxZGFiODZlMDc5ZmQzMWRkOTVlNmIxMzFlNDUyOTE3NTMwNGI2NTMiLCJpYXQiOjE2ODY4NDQ0NzkuNTg2NjYxLCJuYmYiOjE2ODY4NDQ0NzkuNTg2NjY0LCJleHAiOjE3MTg0NjY4NzkuNTc2NDU1LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.C27jChWtpCOmyBNkShWrBxJbsgn50KgwLxJ_iMu0N9XIj-5IoYffxBQokOCBPpc6cK5KsMo5p5we2CAdKumGb3qcv0q3UD72Rq-bnd5tLtJfd8Yu5QJpp1aEENoH9O4SifhFJS0PHakjQJIa6bnIV7-U-sQf6IHXER2wvvGF70IS4ak24lNovQsY9PD6L18uLhdXqpCYkFPGPnXd-SZb43ccMkk7MclQXFE90VjDwgH_uAfyijhDkSGS-LVyHFv8ZvqGVRO2hxaszcoBPlVO9rcXuap0C84SInUf9x2VsWNE_YAFzbaPgoQkMSrn0XMRsuKxplXT1e2n4z1pvl67e-mdHnc1oRfMBU2U_mKXUH0EU1vuUrZH6T3z388F4Rdh86OSVmEkVmw8Csf9uD9LhO55nBiVJvDywIU31qXfr4CtipDbWnR1CIqzxlGQTE_MnkRsawIvTSP1gZyU-KtezhI6zDoT9o1KGx6uv5O8OzgrnYMVvK0u28dTqNNrk95Ma--OFEDqxGERqUA22yg12PZUDf120dDCDDw93nONz5vA0QRqjfescGEhNfh8AnGH9Xz9K3LXUNnJL30w4AZYA_XtZ4xNA7R6dWRVwppBFyQfFXZQg5uYq-LeebtQmy3FT05hdId8IIlyMAvbO9MF9jQEyh80BSW2LeAVYFmJJ7o",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/api/get-patient-medical-record?patient_id=19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"api",
+						"get-patient-medical-record"
+					],
+					"query": [
+						{
+							"key": "patient_id",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "graphql",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  patient_medical_records(first: 10, page: 1){\r\n    data{\r\n      id,\r\n      mri,\r\n      ct_scan,\r\n      patient_name\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:2222/graphiql",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "2222",
+					"path": [
+						"graphiql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
