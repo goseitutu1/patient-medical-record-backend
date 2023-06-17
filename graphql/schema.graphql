@@ -1,0 +1,107 @@
+type PatientMedicalRecord {
+    id: ID!
+    patient_name: String!
+    chest: Boolean!
+    lumbo_sacral_vertebrae: Boolean!
+    shoulder_joint: Boolean!
+    pelvic_joint: Boolean!
+    radius_or_ulner: Boolean!
+    thoracic_vertebrae: Boolean!
+    wrist_joint: Boolean!
+    knee_joint: Boolean!
+    femoral: Boolean!
+    humerus: Boolean!
+    fingers: Boolean!
+    cervical_vertebrae: Boolean!
+    thoraco_lumbar_vertebrae: Boolean!
+    elbow_joint: Boolean!
+    hip_joint: Boolean!
+    foot: Boolean!
+    lumvar_vertebrae: Boolean!
+    thoracic_inlet: Boolean!
+    sacro_lliac_joint: Boolean!
+    ankle: Boolean!
+    tibia_or_fibula: Boolean!
+    obstetric: Boolean!
+    abdioninal: Boolean!
+    pelvis: Boolean!
+    prostrate: Boolean!
+    breast: Boolean!
+    thyroid: Boolean!
+    ct_scan: String!
+    mri: String!
+}
+
+type Mutation {
+    createPatientMedicalRecord(
+        patient_name: String @rules(apply: ["required"])
+        chest: Boolean
+        lumbo_sacral_vertebrae: Boolean
+        shoulder_joint: Boolean
+        pelvic_joint: Boolean
+        humerus: Boolean
+        fingers: Boolean
+        cervical_vertebrae: Boolean
+        thoraco_lumbar_vertebrae: Boolean
+        elbow_joint: Boolean
+        hip_joint: Boolean
+        radius_or_ulner: Boolean
+        thoracic_vertebrae: Boolean
+        wrist_joint: Boolean
+        knee_joint: Boolean
+        femoral: Boolean
+        foot: Boolean
+        lumvar_vertebrae: Boolean
+        thoracic_inlet: Boolean
+        sacro_lliac_joint: Boolean
+        ankle: Boolean
+        tibia_or_fibula: Boolean
+        obstetric: Boolean
+        abdioninal: Boolean
+        pelvis: Boolean
+        prostrate: Boolean
+        breast: Boolean
+        thyroid: Boolean
+        ct_scan: String!
+        mri: String!
+    ): PatientMedicalRecord @create
+
+    updatePatientMedicalRecord(
+        id: ID! @rules(apply: ["required","integer"])
+        patient_name: String! @rules(apply: ["required"])
+        chest: Boolean
+        lumbo_sacral_vertebrae: Boolean
+        shoulder_joint: Boolean
+        pelvic_joint: Boolean
+        humerus: Boolean
+        fingers: Boolean
+        cervical_vertebrae: Boolean
+        thoraco_lumbar_vertebrae: Boolean
+        elbow_joint: Boolean
+        hip_joint: Boolean
+        radius_or_ulner: Boolean
+        thoracic_vertebrae: Boolean
+        wrist_joint: Boolean
+        knee_joint: Boolean
+        femoral: Boolean
+        foot: Boolean
+        lumvar_vertebrae: Boolean
+        thoracic_inlet: Boolean
+        sacro_lliac_joint: Boolean
+        ankle: Boolean
+        tibia_or_fibula: Boolean
+        obstetric: Boolean
+        abdioninal: Boolean
+        pelvis: Boolean
+        prostrate: Boolean
+        breast: Boolean
+        thyroid: Boolean
+        ct_scan: String!
+        mri: String!
+    ): PatientMedicalRecord @update
+}
+
+type Query {
+    patient_medical_records: [PatientMedicalRecord!] @paginate
+    patient_medical_record(id: ID! @eq): PatientMedicalRecord @find
+}
