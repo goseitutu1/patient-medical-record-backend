@@ -1,6 +1,7 @@
 user auth_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzY1Y2IxYjEzMGExZDI0NDNiNTQwNTdjYTU3ZjFiMDE0NDkxYjQxNTNmMTA4Y2VmMzJkODg4YmFlNjNlZTBjMzA3MzRiMTE4ZDkyYjZjYmQiLCJpYXQiOjE2ODcxMTM1MTguNTA4MjA4LCJuYmYiOjE2ODcxMTM1MTguNTA4MjA5LCJleHAiOjE3MTg3MzU5MTguNTA2ODcsInN1YiI6IjUiLCJzY29wZXMiOltdfQ.AMEmrITdvEo7Sqms5IkbZwi_963Nif1Uofdva4yhzq6yqQhrBrws9MwcxBgOpyGK-gnhGUpStKOXB6r-peOqKeh427dI47PT-lmhuMlphG3jnoymGOJFIa_lU2WBJ2THBoRcnW1vx6w2-CiKR1cSI1dZ4tMkFyKzLatvWMeZPwmTdv9WdgGFEXXN41oOMl54HgCoUCRBpODEZk6nM9u98VKR7SV9m5stpR29jCElGnCdTQLsqCbTOr7yPPZReF185dtsWsPZCZDojXsg63dUUJcIKbMcw9X80-9za1pYFluJEPKNiglIgtj3fGHPtnMcIXrFnl36pJMt8Mwd28Zs7GlymhpkqlQgRYdBQsVNfP-d8m-Nmb-fTR4Iczf6DHLeRKP3fLnoHHQ67RafxgGs3PppPGDoeKP2SQasrCRTOR9QHtgZH8ziFAVz70VAiBVpYBW4iB3MVs6ToN86XTFTkkGGY49JHhVYroDkCiysk6jcOe0hUud3CE5vuiatFQhWd63RQx16vqmB0WbPhHhZoXAMOlQSBMLDHtkhlwfdN2cuxru4gJ5nfep5XABHY2tb9L_rsWt6CbA1FMNeOA30-3TGjPWsHmd16TtkWNawyxXQiEPNhB8_vFTuztj-NrX26YVF8lCVABO52x3nHkPAqBTQUYKCNlXxYiCauR67e9Y
 
 
+
 create patient medical record endpoint = https://patient.eitsectechnologies.com/api/create-patient-medical-record
 method = post
 
@@ -11,6 +12,7 @@ hip_joint = not required, radius_or_ulner = not required, toes = not required,th
 knee_joint = not required, femoral = not required,foot = not required, lumvar_vertebrae = not required, thoracic_inlet = not required, sacro_lliac_joint = not required,
 ankle = not required, tibia_or_fibula = not required, obstetric = not required, abdioninal = not required, pelvis = 0, prostrate = not required,
 breast = not required, thyroid = not required]
+
 
 
 
@@ -27,13 +29,16 @@ breast = not required, thyroid = not required]
 
 
 
+
 get patient medical record endpoint = https://patient.eitsectechnologies.com/api/get-patient-medical-record?patient_id=4
 method = get
 
 
 
+
 get all medical records endpoint = https://patient.eitsectechnologies.com/api/get-all-medical-records
 method = get
+
 
 
 
@@ -44,10 +49,12 @@ parameters = [email = required, password = required,password_confirmation = requ
 
 
 
+
 login endpoint = https://patient.eitsectechnologies.com/api/login
 method = post
 
 parameters = [email = required, password = required, full_name = required]
+
 
 
 
