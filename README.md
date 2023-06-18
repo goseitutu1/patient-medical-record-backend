@@ -58,4 +58,6 @@ parameters = [email = required, password = required, full_name = required]
 
 
 
-There is also graphQL implementation in the graphql/schema.graphql file
+NOTE:
+1. A mail is sent to peopleoperations@kompletecare.com after creating or updating a patient medical record.
+2.There is also graphQL implementation in the graphql/schema.graphql file.
