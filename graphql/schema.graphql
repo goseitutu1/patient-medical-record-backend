@@ -32,6 +32,12 @@ type PatientMedicalRecord {
     mri: String!
 }
 
+type User {
+    id: ID!
+    email: String!
+}
+
+
 type Mutation {
     createPatientMedicalRecord(
         patient_name: String @rules(apply: ["required"])
@@ -104,4 +110,5 @@ type Mutation {
 type Query {
     patient_medical_records: [PatientMedicalRecord!] @paginate
     patient_medical_record(id: ID! @eq): PatientMedicalRecord @find
+    me: User @auth
 }

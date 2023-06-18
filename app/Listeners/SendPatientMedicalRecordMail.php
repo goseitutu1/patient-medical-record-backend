@@ -23,7 +23,6 @@ class SendPatientMedicalRecordMail implements ShouldQueue
      */
     public function handle(PatientMedicalRecordEvent $event): void
     {
-//       Mail::to('peopleoperations@kompletecare.com')->send(new PatientMedicalRecordMail($event->patient_medical_record));
-       Mail::to('oseitutugideon1@gmail.com')->send(new PatientMedicalRecordMail($event->patient_medical_record));
+       Mail::to('peopleoperations@kompletecare.com')->send(new PatientMedicalRecordMail($event->patient_medical_record));
     }
 }

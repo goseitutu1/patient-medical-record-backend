@@ -106,8 +106,6 @@ class PatientMedicalRecordController extends Controller
         }
 
         try {
-            $data = $validator->validate();
-
             DB::beginTransaction();
 
             $patient_medical_record = PatientMedicalRecord::query()->where('id',request('patient_id'))->first();
@@ -116,7 +114,7 @@ class PatientMedicalRecordController extends Controller
                 return response()->json(["Message" => "patient medical record not found."], 401);
             }
 
-            $patient_medical_record->update($this->dBDumb($data));
+            $patient_medical_record->update($this->dBDumb());
 
             // notify kompletecare
             \event(new PatientMedicalRecordEvent($patient_medical_record));
@@ -177,40 +175,40 @@ class PatientMedicalRecordController extends Controller
         ];
     }
 
-    private function dBDumb($data) : array
+    private function dBDumb() : array
     {
         return [
-            "patient_name" => ucwords($data['patient_name']),
-            "mri" => $data['mri'],
-            "ct_scan" => $data['ct_scan'],
-            "chest" => $data['chest'],
-            "lumbo_sacral_vertebrae" => $data['lumbo_sacral_vertebrae'],
-            "shoulder_joint" => $data['shoulder_joint'],
-            "pelvic_joint" => $data['pelvic_joint'],
-            "humerus" => $data['humerus'],
-            "fingers" => $data['fingers'],
-            "cervical_vertebrae" => $data['cervical_vertebrae'],
-            "thoraco_lumbar_vertebrae" => $data['thoraco_lumbar_vertebrae'],
-            "elbow_joint" => $data['elbow_joint'],
-            "hip_joint" => $data['hip_joint'],
-            "radius_or_ulner" => $data['radius_or_ulner'],
-            "toes" => $data['toes'],
-            "thoracic_vertebrae" => $data['thoracic_vertebrae'],
-            "wrist_joint" => $data['wrist_joint'],
-            "knee_joint" => $data['knee_joint'],
-            "femoral" => $data['femoral'],
-            "foot" => $data['foot'],
-            "lumvar_vertebrae" => $data['lumvar_vertebrae'],
-            "thoracic_inlet" => $data['thoracic_inlet'],
-            "sacro_lliac_joint" => $data['sacro_lliac_joint'],
-            "ankle" => $data['ankle'],
-            "tibia_or_fibula" => $data['tibia_or_fibula'],
-            "obstetric" => $data['obstetric'],
-            "abdioninal" => $data['abdioninal'],
-            "pelvis" => $data['pelvis'],
-            "prostrate" => $data['prostrate'],
-            "breast" => $data['breast'],
-            "thyroid" => $data['thyroid'],
+            "patient_name" => ucwords(request('patient_name')),
+            "mri" => request('mri'),
+            "ct_scan" => request('ct_scan'),
+            "chest" => request('chest'),
+            "lumbo_sacral_vertebrae" => request('lumbo_sacral_vertebrae'),
+            "shoulder_joint" => request('shoulder_joint'),
+            "pelvic_joint" => request('pelvic_joint'),
+            "humerus" => request('humerus'),
+            "fingers" => request('fingers'),
+            "cervical_vertebrae" => request('cervical_vertebrae'),
+            "thoraco_lumbar_vertebrae" => request('thoraco_lumbar_vertebrae'),
+            "elbow_joint" => request('elbow_joint'),
+            "hip_joint" => request('hip_joint'),
+            "radius_or_ulner" => request('radius_or_ulner'),
+            "toes" => request('toes'),
+            "thoracic_vertebrae" => request('thoracic_vertebrae'),
+            "wrist_joint" => request('wrist_joint'),
+            "knee_joint" => request('knee_joint'),
+            "femoral" => request('femoral'),
+            "foot" => request('foot'),
+            "lumvar_vertebrae" => request('lumvar_vertebrae'),
+            "thoracic_inlet" => request('thoracic_inlet'),
+            "sacro_lliac_joint" => request('sacro_lliac_joint'),
+            "ankle" => request('ankle'),
+            "tibia_or_fibula" => request('tibia_or_fibula'),
+            "obstetric" => request('obstetric'),
+            "abdioninal" => request('abdioninal'),
+            "pelvis" => request('pelvis'),
+            "prostrate" => request('prostrate'),
+            "breast" => request('breast'),
+            "thyroid" => request('thyroid'),
         ];
     }
 
@@ -222,11 +220,9 @@ class PatientMedicalRecordController extends Controller
         }
 
         try {
-            $data = $validator->validate();
-
             DB::beginTransaction();
 
-            $patient_medical_record = PatientMedicalRecord::create($this->dBDumb($data));
+            $patient_medical_record = PatientMedicalRecord::create($this->dBDumb());
 
             // notify kompletecare
             \event(new PatientMedicalRecordEvent($patient_medical_record));
