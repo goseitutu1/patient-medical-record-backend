@@ -1,66 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+user auth_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMzY1Y2IxYjEzMGExZDI0NDNiNTQwNTdjYTU3ZjFiMDE0NDkxYjQxNTNmMTA4Y2VmMzJkODg4YmFlNjNlZTBjMzA3MzRiMTE4ZDkyYjZjYmQiLCJpYXQiOjE2ODcxMTM1MTguNTA4MjA4LCJuYmYiOjE2ODcxMTM1MTguNTA4MjA5LCJleHAiOjE3MTg3MzU5MTguNTA2ODcsInN1YiI6IjUiLCJzY29wZXMiOltdfQ.AMEmrITdvEo7Sqms5IkbZwi_963Nif1Uofdva4yhzq6yqQhrBrws9MwcxBgOpyGK-gnhGUpStKOXB6r-peOqKeh427dI47PT-lmhuMlphG3jnoymGOJFIa_lU2WBJ2THBoRcnW1vx6w2-CiKR1cSI1dZ4tMkFyKzLatvWMeZPwmTdv9WdgGFEXXN41oOMl54HgCoUCRBpODEZk6nM9u98VKR7SV9m5stpR29jCElGnCdTQLsqCbTOr7yPPZReF185dtsWsPZCZDojXsg63dUUJcIKbMcw9X80-9za1pYFluJEPKNiglIgtj3fGHPtnMcIXrFnl36pJMt8Mwd28Zs7GlymhpkqlQgRYdBQsVNfP-d8m-Nmb-fTR4Iczf6DHLeRKP3fLnoHHQ67RafxgGs3PppPGDoeKP2SQasrCRTOR9QHtgZH8ziFAVz70VAiBVpYBW4iB3MVs6ToN86XTFTkkGGY49JHhVYroDkCiysk6jcOe0hUud3CE5vuiatFQhWd63RQx16vqmB0WbPhHhZoXAMOlQSBMLDHtkhlwfdN2cuxru4gJ5nfep5XABHY2tb9L_rsWt6CbA1FMNeOA30-3TGjPWsHmd16TtkWNawyxXQiEPNhB8_vFTuztj-NrX26YVF8lCVABO52x3nHkPAqBTQUYKCNlXxYiCauR67e9Y
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+create patient medical record endpoint = https://patient.eitsectechnologies.com/api/create-patient-medical-record
+method = post
+parameters = [patient_name = required,mri = not required, ct_scan = not required, chest = not required,
+lumbo_sacral_vertebrae = not required, shoulder_joint = not required, pelvic_joint = not required,
+humerus = not required,fingers = not required,cervical_vertebrae = not required,thoraco_lumbar_vertebrae = not required,elbow_joint = not required,
+hip_joint = not required, radius_or_ulner = not required, toes = not required,thoracic_vertebrae = not required, wrist_joint = not required,
+knee_joint = not required, femoral = not required,foot = not required, lumvar_vertebrae = not required, thoracic_inlet = not required, sacro_lliac_joint = not required,
+ankle = not required, tibia_or_fibula = not required, obstetric = not required, abdioninal = not required, pelvis = 0, prostrate = not required,
+breast = not required, thyroid = not required]
 
-## About Laravel
+edit patient medical record endpoint = https://patient.eitsectechnologies.com/api/edit-patient-medical-record
+method = post
+parameters = [patient_id = required,patient_name = required,mri = not required, ct_scan =not required, chest = not required,
+lumbo_sacral_vertebrae = not required, shoulder_joint = not required, pelvic_joint = not required,
+humerus = not required,fingers = not required,cervical_vertebrae = not required,thoraco_lumbar_vertebrae = not required,elbow_joint = not required,
+hip_joint = not required, radius_or_ulner = not required, toes = not required,thoracic_vertebrae = not required, wrist_joint = not required,
+knee_joint = not required, femoral = not required,foot = not required, lumvar_vertebrae = not required, thoracic_inlet = not required, sacro_lliac_joint = not required,
+ankle = not required, tibia_or_fibula = not required, obstetric = not required, abdioninal = not required, pelvis = 0, prostrate = not required,
+breast = not required, thyroid = not required]
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+get patient medical record endpoint = https://patient.eitsectechnologies.com/api/get-patient-medical-record?patient_id=4
+method = get
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+get all medical records endpoint = https://patient.eitsectechnologies.com/api/get-all-medical-records
+method = get
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+signup endpoint = https://patient.eitsectechnologies.com/api/signup
+method = post
+parameters = [email = required, password = required,password_confirmation = required, full_name = required]
 
-## Learning Laravel
+login endpoint = https://patient.eitsectechnologies.com/api/login
+method = post
+parameters = [email = required, password = required, full_name = required]
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+There is also graphQL implementation in the graphql/schema.graphql file

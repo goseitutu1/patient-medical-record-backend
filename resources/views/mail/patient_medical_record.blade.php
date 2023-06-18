@@ -165,11 +165,11 @@
                             </tr>
                             <tr>
                                 <td>CT Scan</td>
-                                <td>{{$patientMedicalRecord->ct_scan}}</td>
+                                <td>{{$patientMedicalRecord->ct_scan ?? 'N/A'}}</td>
                             </tr>
                             <tr>
                                 <td>MRI</td>
-                                <td>{{$patientMedicalRecord->mri}}</td>
+                                <td>{{$patientMedicalRecord->mri ?? 'N/A'}}</td>
                             </tr>
                         </table>
                     </div>

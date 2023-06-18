@@ -69,8 +69,8 @@ class PatientMedicalRecordController extends Controller
         $validator = Validator::make($request->all(), [
             "patient_id" => "required|integer",
             "patient_name" => "required",
-            "mri" => "required",
-            "ct_scan" => "required",
+            "mri" => "nullable",
+            "ct_scan" => "nullable",
             "chest" => "nullable",
             "lumbo_sacral_vertebrae" => "nullable",
             "shoulder_joint" => "nullable",
@@ -142,8 +142,8 @@ class PatientMedicalRecordController extends Controller
     {
         return [
             "patient_name" => "required",
-            "mri" => "required",
-            "ct_scan" => "required",
+            "mri" => "nullable",
+            "ct_scan" => "nullable",
             "chest" => "nullable",
             "lumbo_sacral_vertebrae" => "nullable",
             "shoulder_joint" => "nullable",
